@@ -2,7 +2,7 @@
 
 name: SEC488 DAST
 
-#Controls when the action will run.  Triggers the workflow on push or pull request
+# Controls when the action will run.  Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
 push:
@@ -22,7 +22,7 @@ steps:
 # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 - uses: actions/checkout@v2
 
-#Runs the code in APache/PHP web server container
+#Runs the code in Apache/PHP web server container
 - name: Startup web server
 run: docker run -v $(pwd):/var/www/html -dit --rm --name php php:apache
 
